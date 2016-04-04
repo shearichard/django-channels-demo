@@ -3,6 +3,7 @@ autobahn==0.13.0
 -e git+git@github.com:andrewgodwin/channels.git@dfef0c551eda0c1a632f69360b284f32c9e56ecd#egg=channels-master
 daphne==0.10.1
 Django==1.9.5
+django-bootstrap3==7.0.1
 six==1.10.0
 Twisted==16.0.0
 txaio==2.2.2
