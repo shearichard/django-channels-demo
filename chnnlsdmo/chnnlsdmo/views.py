@@ -8,7 +8,7 @@ from .models import Voter, Flag, Vote
 
 class IndexView(generic.ListView):
     template_name = 'chnnlsdmo/index.html'
-    context_object_name = 'latest_question_list'
+    context_object_name = 'flag_list'
 
     def get_queryset(self):
         """Return the last five published questions."""
