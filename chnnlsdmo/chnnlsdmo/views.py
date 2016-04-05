@@ -26,6 +26,23 @@ class ResultsView(generic.DetailView):
 
 
 def vote(request, flag_id):
-    print("In vote. flag_id=" + flag_id)
-    return HttpResponse("You're voting on flag %s." % flag_id)
-    ... # same as above, no changes needed.
+    flag = get_object_or_404(Flag, pk=flag_id)
+    print(flag.name)
+    '''
+    try:
+        selected_choice = flag.choice_set.get(pk=flag_id)
+    except (KeyError, Choice.DoesNotExist):
+        # Redisplay the flag voting form.
+        return render(request, 'polls/detail.html', {
+            'flag': flag,
+            'error_message': "You didn't select a choice.",
+        })
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data. This prevents data from being posted twice if a
+        # user hits the Back button.
+        return HttpResponseRedirect(reverse('polls:results', args=(flag.id,)))
+    '''
+    return HttpResponseRedirect(reverse('index'))
