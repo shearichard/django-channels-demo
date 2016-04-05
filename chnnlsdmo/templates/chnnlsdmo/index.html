@@ -24,7 +24,7 @@ table#flagslist  td.flagname{
                 {% for flag in flag_list %}
                     <tr>
                         <td class="flagname">{{flag.name}}</td>
-                        <td><a class="btn btn-default" href="#" role="button">Vote</a></td>
+                        <td><a class="btn btn-default" href="{{flag.id}}/vote/" role="button">Vote</a></td>
                     </tr>
                 {% endfor %}
                </tbody>
