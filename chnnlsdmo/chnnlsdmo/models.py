@@ -30,3 +30,9 @@ class Vote(models.Model):
     '''
     flag = models.ForeignKey(Flag, on_delete=models.CASCADE)
     voter = models.ForeignKey(Voter, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "{0} voted for {1} at {2}".format(   self.voter.user.username,
+                                                    self.flag.name,
+                                                    self.created )
