@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.views import generic
+from django.db.models import Count
 
 from .models import Voter, Flag, Vote
 
@@ -12,7 +13,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published questions."""
-        return Flag.objects.order_by('name')
+        return Flag.objects.order_by('name').annotate(num_votes=Count('vote'))
 
 
 class DetailView(generic.DetailView):
