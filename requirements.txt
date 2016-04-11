@@ -5,6 +5,7 @@ daphne==0.10.1
 Django==1.9.5
 django-bootstrap-themes==3.3.6
 django-extensions==1.6.1
+django-storages==1.4.1
 gunicorn==19.4.5
 six==1.10.0
 Twisted==16.0.0

@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-{% load bootstrap_themes %}
-
-{% bootstrap_styles theme='superhero' type='css' %}
+<!-- 1 -->
+{% comment "if the cdn can be made to work then we won't need this" %}{% load bootstrap_themes %}{% endcomment %}
+<!-- 2 -->
+{% comment "if the cdn can be made to work then we won't need this" %}{% bootstrap_styles theme='superhero' type='css' %}{% endcomment %}
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-88w0u/oucDSTE30ETLLIobzhT+bQ6CSsiqQyLZpwHvve89eqUA9F2Db6ST6jGRLx" crossorigin="anonymous">
+<!-- 3 -->
 <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
-{% bootstrap_script %}
+<!-- 4 -->
+{% comment "if the cdn can be made to work then we won't need this" %}{% bootstrap_script %}{% endcomment %}
+{% comment "if the cdn can be made to work then we won't need this" %}<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js{% endcomment %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- 5 -->
 <style>
 table#flagslist  td.flagname{
     font-size: 15px;
