@@ -13,4 +13,12 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.settings")
 
+if 'DYNO' in os.environ:
+    debug = False
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.settings_heroku")
+else:
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.settings")
+    debug = True
+
+
 application = get_wsgi_application()
