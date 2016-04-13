@@ -1,1 +1,1 @@
-web: gunicorn chnnlsdmo.wsgi --log-file -
+web: gunicorn chnnlsdmo.chnnlsdmo.wsgi --log-file -
