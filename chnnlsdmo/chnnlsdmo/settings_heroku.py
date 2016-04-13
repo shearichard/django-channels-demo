@@ -5,7 +5,6 @@ from sys import path
 from .settings import *
 
 DEBUG = True 
-TEMPLATE_DEBUG = DEBU
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
