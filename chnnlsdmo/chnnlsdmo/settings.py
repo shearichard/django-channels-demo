@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap_themes',
     'chnnlsdmo',
 ]
 
@@ -134,5 +133,5 @@ print("**************************************")
 print(BASE_DIR)
 print("**************************************")
 STATICFILES_DIRS = [
-    "/media/poloextra/dev/django-channels-demo/chnnlsdmo/chnnlsdmo/static"
+    os.path.join(PROJECT_ROOT, 'static'),
 ]
