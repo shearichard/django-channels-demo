@@ -1,6 +1,7 @@
 import os
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
+import dj_database_url
 
 from .settings import *
 
