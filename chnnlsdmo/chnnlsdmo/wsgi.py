@@ -14,9 +14,9 @@ from whitenoise.django import DjangoWhiteNoise
 
 if 'DYNO' in os.environ:
     debug = False
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.settings_heroku")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.chnnlsdmo.settings_heroku")
 else:
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "chnnlsdmo.chnnlsdmo.settings")
     debug = True
 
 
